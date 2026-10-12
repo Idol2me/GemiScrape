@@ -1,35 +1,48 @@
-# 🚀 GemiScrape
+# GemiScrape 🚀
 
-**AI-powered web scraping from your terminal — without a traditional API setup.**
+<p align="center">
+  <img src="https://i.postimg.cc/Gpn5vxGD/Gemini-Generated-Image-2babaj2babaj2bab.jpg" alt="GemiScrape Logo" width="220">
+</p>
 
-GemiScrape is a lightweight command-line tool that uses Google Gemini to analyze web content, extract relevant information, and transform unstructured data into clean, structured output.
+<p align="center">
+  <strong>AI-powered web scraping from your terminal.</strong>
+  <br>
+  Extract, parse, and structure web data with Google Gemini.
+</p>
 
-Designed for Linux users and developers, it simplifies web data extraction with a straightforward CLI workflow.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/AI-Google%20Gemini-8E75B2?style=flat-square" alt="Google Gemini">
+  <img src="https://img.shields.io/badge/Platform-Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux">
+</p>
+
+---
+
+GemiScrape is a lightweight command-line interface (CLI) tool designed to extract and structure web content using Google Gemini.
+
+Built for developers who want to turn unstructured web data into useful output directly from the terminal, without a traditional API setup.
 
 > [!IMPORTANT]
 > **Security & Scope**
 >
-> GemiScrape is a data extraction tool, not an autonomous AI agent. It is not designed to execute arbitrary system commands or modify local files beyond explicitly requested output exports. Its capabilities depend on the configured tools, dependencies, and permissions.
+> GemiScrape is a data extraction tool, not an autonomous AI agent. It is not designed to execute arbitrary system commands. File access and modifications depend on the implemented export features and the permissions granted to the program.
 
 ## ✨ Features
 
-* 🤖 **AI-Powered Extraction** — Leverage Google Gemini to understand web content and extract relevant information.
-* 🔑 **No Traditional API Setup** — Designed to work without requiring a conventional Gemini API key, depending on the supported access method.
-* 🛡️ **Focused & Lightweight** — Built for web data extraction rather than autonomous system operations.
+* 🤖 **AI-Powered Parsing** — Use Google Gemini to analyze web content and extract relevant information.
+* 🔑 **API-less Approach** — Designed to work without a conventional API key, depending on the supported access method.
+* ⚡ **Lightweight CLI** — Run extraction workflows directly from your terminal.
 * ⚙️ **Flexible Configuration** — Customize supported models, cookies, timeouts, and themes through `config.json`.
-* 📦 **Multiple Export Formats** — Structure extracted data as JSON, Markdown, or plain text.
-* 🐧 **Linux-Friendly CLI** — Run your extraction workflows directly from the terminal.
-* 🧩 **Developer-Friendly** — Integrate structured web data into your own scripts and workflows.
+* 📊 **Multiple Export Formats** — Export extracted data as JSON, Markdown, or plain text.
+* 🐧 **Linux-Friendly** — Designed with terminal-based workflows in mind.
 
 ## 📋 Requirements
 
-Before installing, make sure you have:
-
-* Python 3 installed.
-* Git.
-* `pip` available in your environment.
-* A supported method of accessing Google Gemini.
-* An internet connection.
+* Python 3
+* Git
+* pip
+* Internet connection
+* A supported method of accessing Google Gemini
 
 ## 🛠️ Installation
 
@@ -46,7 +59,7 @@ cd GemiScrape
 python3 -m pip install -r requirements.txt
 ```
 
-> **Tip:** Consider using a virtual environment to keep dependencies isolated from your system Python.
+### Optional: Use a virtual environment
 
 ```bash
 python3 -m venv .venv
@@ -58,58 +71,50 @@ python -m pip install -r requirements.txt
 
 GemiScrape supports configuration through `config.json`.
 
-Depending on the implementation, you can customize settings such as:
+Depending on your version, available settings may include:
 
-* **Model:** Select a supported Gemini model.
-* **Cookies:** Configure session cookies when required by the access method.
+* **Model:** Configure the supported Gemini model.
+* **Cookies:** Set cookies when required by the access method.
 * **Timeouts:** Adjust request time limits.
 * **Theme:** Customize the CLI appearance.
 
-Check the project's configuration file or source code for the exact supported options and default values.
+Check the configuration file for the exact supported options and default values.
 
 ## 🚀 Usage
 
-Once installed, run GemiScrape using the entry point provided by the project.
+To check the available commands, run the project's CLI entry point:
 
 ```bash
 python3 main.py --help
 ```
 
-> Replace `main.py` with the actual entry-point filename if your project uses a different one.
+Replace `main.py` with the actual entry-point filename if necessary.
 
-Use the available command-line options to configure your extraction workflow and choose an output format.
+## 📦 Export Formats
 
-## 📄 Export Formats
-
-GemiScrape is designed to support the following output formats:
-
-| Format     | Description                                    |
-| ---------- | ---------------------------------------------- |
-| `JSON`     | Structured data for applications and scripts.  |
-| `Markdown` | Readable, formatted content for documentation. |
-| `TXT`      | Plain text for simple processing and storage.  |
+| Format   | Purpose                                      |
+| -------- | -------------------------------------------- |
+| JSON     | Structured data for scripts and applications |
+| Markdown | Readable output for documentation            |
+| TXT      | Plain-text output for simple processing      |
 
 ## 🔒 Security & Responsible Use
 
-GemiScrape is intended for legitimate web data extraction and analysis.
+* Respect website terms of service and access restrictions.
+* Never share authentication cookies or session credentials.
+* Treat scraped content as untrusted input.
+* Review dependencies before running the project.
+* Use export features only with intended file paths.
 
-* Respect website terms of service and applicable access restrictions.
-* Avoid sharing sensitive session cookies or authentication credentials.
-* Treat extracted web content as untrusted input.
-* Review the code and dependencies before running the project.
-* Export files only to locations you intend to use.
-
-**Note:** "API-less" does not necessarily mean that the tool operates without network requests, authentication, rate limits, or third-party dependencies. Actual behavior depends on its implementation and the access method used.
+**Note:** API-less does not mean offline. The tool may still rely on network access, browser sessions, cookies, or third-party services.
 
 ## 🗺️ Roadmap
 
-Potential improvements for future versions:
-
-* [ ] More extraction and output options.
-* [ ] Improved error handling and request diagnostics.
-* [ ] Custom extraction templates.
-* [ ] Better configuration validation.
-* [ ] Expanded documentation and usage examples.
+* [ ] Improve extraction accuracy.
+* [ ] Expand CLI options.
+* [ ] Add custom extraction templates.
+* [ ] Improve error handling and diagnostics.
+* [ ] Expand documentation with practical examples.
 
 ## 🤝 Contributing
 
@@ -117,17 +122,18 @@ Contributions, suggestions, and bug reports are welcome.
 
 1. Fork the repository.
 2. Create a feature branch.
-3. Make your changes.
-4. Test your implementation.
-5. Open a pull request describing your changes.
+3. Implement your changes.
+4. Test your changes.
+5. Submit a pull request.
 
 ## 📜 License
 
-Check the repository for license information before redistributing or modifying the project.
+Check the repository for license information before redistributing or modifying this project.
 
 ---
 
 <p align="center">
-  <strong>GemiScrape 🚀</strong><br>
-  <em>Extract. Structure. Simplify.</em>
+  <strong>GemiScrape</strong>
+  <br>
+  <sub>Extract. Structure. Simplify.</sub>
 </p>
